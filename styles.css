@@ -1,18 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
-
 :root {
   --border: rgb(3, 169, 244);
-  --g1: rgb(98, 0, 234);
-  --g2: rgb(236, 64, 122);
-  --g3: rgb(253, 216, 53);
+  --g1: #9a9a9a;
+  --g2: #707070;
+  --g3: #454545;
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 body {
   height: 100vh;
   width: 100vw;
@@ -20,12 +17,10 @@ body {
   background-color: black;
   font-family: "Raleway", "Helvetica Neue", sans-serif;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
-.topnav {
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -34,36 +29,86 @@ html {
   background-color: #333;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
 }
-
-.topnav a {
-  float: right;
-  padding: 14px 16px;
-  color: #f2f2f2;
-  text-align: center;
+.brand-title {
+  font-size: 2vmax;
+  margin: 0.5rem;
+  letter-spacing: 1vw;
+}
+.navbar-links {
+  height: 100%;
+}
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.navbar-links li {
+  list-style: none;
+}
+.navbar-links li a {
+  display: block;
   text-decoration: none;
-  font-size: 17px;
+  color: white;
+  padding: 1rem;
 }
-
-.topnav .name {
-  float: left;
-}
-
-.topnav a:hover,
-.topnav a.active {
+.navbar-links li:hover {
   background-color: #4a1972;
   color: #b5ad00;
   border-radius: 20px;
 }
-
-.name {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  letter-spacing: 20px;
+.navbar-links li:nth-child(4):hover {
+  border-radius: 20px;
+  border-top-right-radius: 0px;
+}
+.navbar-links li a:hover {
+  color: #b5ad00;
+}
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links ul li {
+    text-align: center;
+  }
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
 }
 
 .address,
@@ -72,30 +117,33 @@ html {
   position: absolute;
   width: 100%;
   text-align: center;
+  font-size: 1vw;
   color: white;
 }
-
 .address {
   bottom: 0;
-  margin-bottom: 20px;
+  margin-bottom: 3vh;
   left: 50%;
+  font-size: min(2vh) max(3vh);
   transform: translateX(-50%);
 }
-
-.name-school {
+.container-info {
   top: 0;
-  margin-top: 60px;
+  margin-top: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.name-school {
   left: 50%;
   transform: translateX(-50%);
-  font-size: 64px;
+  font-size: 3.5vw;
   font-weight: bold;
 }
-
 .motto {
-  top: 0;
-  margin-top: 150px;
+  margin-top: 10px;
+  font-size: min(1vh) max(1.8vh);
 }
-
 #image-track {
   display: flex;
   gap: 4vmin;
@@ -105,14 +153,12 @@ html {
   transform: translate(-50%, -50%);
   user-select: none;
 }
-
 #image-track .image {
   width: 40vmin;
   height: 56vmin;
   object-fit: cover;
   object-position: 100% center;
 }
-
 .section1,
 .section3,
 .section4 {
@@ -125,11 +171,9 @@ html {
   background-size: cover;
   padding-top: 50px;
 }
-
 .section1 {
   background-image: url("https://cdn.discordapp.com/attachments/915785990566719488/1100673723884912660/wallpaperflare.com_wallpaper.jpg");
 }
-
 .section2 {
   background-color: rgb(10, 10, 10);
   display: grid;
@@ -138,15 +182,12 @@ html {
   padding: 0;
   place-items: center;
 }
-
 .section3 {
   background-image: url("https://cdn.discordapp.com/attachments/915785990566719488/1100674092996251688/1181492.jpg");
 }
-
 .section4 {
   background-image: url("https://c4.wallpaperflare.com/wallpaper/862/176/17/evil-dead-horror-movies-wallpaper-preview.jpg");
 }
-
 .text {
   position: absolute;
   top: 50%;
@@ -156,7 +197,6 @@ html {
   font-size: 1rem;
   color: white;
 }
-
 .card-container {
   display: flex;
   align-items: center;
@@ -179,26 +219,21 @@ html {
   position: relative;
   width: 56vmin;
 }
-
 .card:hover:before {
   background-position: 100% 100%;
   transform: scale(1.08, 1.03);
 }
-
 .card:hover > .card-content {
   background-position: -10% 0%;
 }
-
 .card:hover > .card-icon {
   color: white;
 }
-
 .card:hover > .card-content > .card-subtitle > .card-subtitle-word {
   opacity: 1;
   transform: translateY(0%);
   transition: opacity 0ms, transform 200ms cubic-bezier(0.9, 0.06, 0.15, 0.9);
 }
-
 .card:before {
   background: linear-gradient(
     130deg,
@@ -219,7 +254,6 @@ html {
   width: 100%;
   z-index: 1;
 }
-
 .card-content {
   background-image: radial-gradient(
     rgba(255, 255, 255, 0.2) 8%,
@@ -234,7 +268,6 @@ html {
   width: calc(100% - 10vmin);
   z-index: 2;
 }
-
 .card-title,
 .card-subtitle {
   color: white;
@@ -242,17 +275,14 @@ html {
   font-weight: 400;
   margin: 0px;
 }
-
 .card-title {
   font-size: 6vmin;
 }
-
 .card-subtitle {
   font-size: 2vmin;
   margin-top: 2vmin;
   text-align: justify;
 }
-
 .card-subtitle-word {
   display: inline-block;
   margin: 0vmin 0.3vmin;

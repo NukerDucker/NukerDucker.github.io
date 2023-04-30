@@ -98,3 +98,9 @@ const createSubtitle = (text) => text.split(" ").map(addWord);
 createSubtitle(
   "     Bangkok Christian College (BCC) is a private boys' school in the financial district of Si Lom, Bangkok. The school has a longstanding reputation as one of the most prestigious and highly selective schools in Thailand.Bangkok Christian College was established on 30 September 1852 by American Presbyterian missionaries. Bangkok Christian College is the oldest school in Thailand. Originally in Thonburi, the school moved to its present site in Bang Rak District in 1902.The school has about 400 academic staff, both Thai and foreigner, and 6,000 students in 12 grades. Although it is a Christian school, only about five percent of students are Christians. Most students are Buddhist, but it is popular with students of all faiths due to its strong reputation."
 );
+const toggleButton = document.getElementsByClassName("toggle-button")[0];
+const navbarLinks = document.getElementsByClassName("navbar-links")[0];
+
+toggleButton.addEventListener("click", () => {
+  navbarLinks.classList.toggle("active");
+});
