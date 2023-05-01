@@ -25,11 +25,7 @@ html {
   scroll-behavior: smooth;
 }
 
-::selection {
-  color: #fff;
-  background: #1cc7d0;
-}
-
+/* Responsive Menu */
 @media (max-width: 800px) {
   .navbar {
     flex-direction: column;
@@ -62,17 +58,23 @@ html {
     display: flex;
   }
 }
+
+/* Visible Scroll */
 .fadeContainer {
   opacity: 0;
   transition: all 2s ease;
 }
+
 .fadeContainer.active {
   opacity: 1;
 }
 
+/*No Scrollbar*/
 body::-webkit-scrollbar {
   display: none;
 }
+
+/*Description Card*/
 .container-card {
   display: flex;
   justify-content: center;
@@ -111,24 +113,6 @@ body::-webkit-scrollbar {
 .bcc-desc {
   font-size: 1em;
   line-height: 1.5;
-}
-
-.container {
-  width: 80%;
-  height: 700px;
-  margin: 0 auto;
-  gap: 42px;
-}
-
-.container {
-  display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-}
-.sec-title {
-  font-size: max(2vw);
-  margin-bottom: 40rem;
-  color: white;
 }
 
 .navbar {
@@ -182,6 +166,7 @@ body::-webkit-scrollbar {
   background-color: white;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
 .navbar-links li a:hover {
   text-align: center;
   color: black;
@@ -212,18 +197,28 @@ body::-webkit-scrollbar {
   width: 100%;
   min-height: 100vh;
 }
+
 #section1 {
   background-image: url("https://cdn.discordapp.com/attachments/915785990566719488/1100673723884912660/wallpaperflare.com_wallpaper.jpg");
 }
+
+.sec-title {
+  font-size: max(2vw);
+  margin-bottom: 40rem;
+  color: white;
+}
+
 #section2 {
   padding: 0 20px 0;
   background: rgb(0, 0, 0);
 }
+
 #section3 {
   gap: 42px;
   background-image: url("https://cdn.discordapp.com/attachments/915785990566719488/1100674092996251688/1181492.jpg");
 }
 
+/*Info Card*/
 .info-card-container {
   display: flex;
   justify-content: center;
@@ -317,6 +312,7 @@ body::-webkit-scrollbar {
   margin-top: 10px;
 }
 
+/*Contact Card*/
 .wrapper {
   height: 400px;
   width: 320px;
