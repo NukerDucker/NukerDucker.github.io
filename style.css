@@ -19,7 +19,6 @@ body {
   display: grid;
   height: 100%;
   width: 100%;
-  background: linear-gradient(375deg, #9a9a9a, #454545);
 }
 
 html {
@@ -75,7 +74,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 .container-card {
-  border: 10px black;
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
@@ -120,18 +118,6 @@ body::-webkit-scrollbar {
   height: 700px;
   margin: 0 auto;
   gap: 42px;
-}
-
-.item {
-  width: 30rem;
-  height: 40rem;
-  background-color: #fb7185;
-  padding: 1em;
-  font-weight: 700;
-  color: white;
-  text-align: center;
-  border: 10px solid red;
-  border-radius: 10px;
 }
 
 .container {
@@ -183,9 +169,7 @@ body::-webkit-scrollbar {
   display: block;
   text-decoration: none;
   padding: 1rem;
-  font-family: "Montserrat";
-  font-weight: 500;
-  font-size: 20px;
+  font: 500 20px "Montserrat";
   text-align: center;
   line-height: 24px;
   color: #ffffff;
@@ -193,10 +177,8 @@ body::-webkit-scrollbar {
 
 .navbar-links li:hover {
   border-radius: 30px;
-  text-decoration: underline;
+  text-decoration: underline black;
   height: 53px;
-
-  text-decoration-color: black;
   background-color: white;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -223,10 +205,7 @@ body::-webkit-scrollbar {
 }
 
 .section {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: fixed center / cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,8 +216,7 @@ body::-webkit-scrollbar {
   background-image: url("https://cdn.discordapp.com/attachments/915785990566719488/1100673723884912660/wallpaperflare.com_wallpaper.jpg");
 }
 #section2 {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 0 20px 0;
   background: rgb(0, 0, 0);
 }
 #section3 {
@@ -273,10 +251,7 @@ body::-webkit-scrollbar {
   border-radius: 30px;
   backface-visibility: hidden;
   overflow: hidden;
-  padding-left: 42px;
-  padding-top: 30px;
-  padding-bottom: 31px;
-  padding-right: 39px;
+  padding: 30px 39px 42px 31px;
   background: #743282;
   color: #ffdf00;
 }
@@ -290,17 +265,13 @@ body::-webkit-scrollbar {
 }
 
 .thefront h1 {
-  font-family: "Montserrat";
-  font-weight: 500;
-  font-size: 45px;
+  font: 500 45px "Montserrat";
   color: #ffdf00;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .theback h1 {
-  font-family: "Montserrat";
-  font-weight: 500;
-  font-size: 45px;
+  font: 500 45px "Montserrat";
   color: #ffffff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -318,20 +289,17 @@ body::-webkit-scrollbar {
 
 .theback {
   position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 30px;
-  backface-visibility: hidden;
-  overflow: hidden;
-  padding-left: 42px;
-  padding-top: 30px;
-  padding-bottom: 31px;
-  padding-right: 39px;
-  width: 660px;
-  height: 400px;
   display: flex;
   background: #5579c6;
   color: #ffffff;
+  top: 0;
+  left: 0;
+  width: 660px;
+  height: 400px;
+  padding: 30px 39px 42px 31px;
+  border-radius: 30px;
+  backface-visibility: hidden;
+  overflow: hidden;
   transform: rotateY(180deg);
 }
 
@@ -341,11 +309,7 @@ body::-webkit-scrollbar {
 
 #address,
 #motto {
-  font-family: "Abhaya Libre Medium";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 24px;
+  font-family: normal 500 20px/24px "Montserrat";
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -411,8 +375,7 @@ body::-webkit-scrollbar {
 }
 
 .back-face .info .title {
-  font-size: 30px;
-  font-weight: 500;
+  font: 500 30px;
 }
 
 .back-face ul {

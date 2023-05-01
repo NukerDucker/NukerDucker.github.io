@@ -1,25 +1,29 @@
-const toggleButton = document.getElementsByClassName("toggle-button")[0];
-const navbarLinks = document.getElementsByClassName("navbar-links")[0];
+const toggleButton = document.querySelector(".toggle-button");
+const navbarLinks = document.querySelector(".navbar-links");
+const card = document.getElementById("myCard");
+const fadeContainers = document.querySelectorAll(".fadeContainer");
 
 toggleButton.addEventListener("click", () => {
   navbarLinks.classList.toggle("active");
 });
-const card = document.getElementById("myCard");
-card.addEventListener("click", function () {
+
+card.addEventListener("click", () => {
   card.classList.toggle("flipped");
 });
 
 window.addEventListener("scroll", reveal);
+
 function reveal() {
-  var reveals = document.querySelectorAll(".fadeContainer");
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var revealTop = reveals[i].getBoundingClientRect().top;
-    var revealpoint = 150;
-    if (revealTop < windowHeight - revealpoint) {
-      reveals[i].classList.add("active");
+  const windowHeight = window.innerHeight;
+  const revealPoint = 150;
+
+  fadeContainers.forEach((fadeContainer) => {
+    const revealTop = fadeContainer.getBoundingClientRect().top;
+
+    if (revealTop < windowHeight - revealPoint) {
+      fadeContainer.classList.add("active");
     } else {
-      reveals[i].classList.remove("active");
+      fadeContainer.classList.remove("active");
     }
-  }
+  });
 }
