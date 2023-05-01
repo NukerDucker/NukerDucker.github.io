@@ -27,7 +27,7 @@ html {
 
 /* Responsive Menu */
 @media (max-width: 800px) {
-  .navbar {
+  .navbar div{
     flex-direction: column;
     align-items: flex-start;
   }
@@ -223,7 +223,7 @@ body::-webkit-scrollbar {
 }
 
 #section1 {
-  background-image: url("https://cdn.discordapp.com/attachments/915785990566719488/1100673723884912660/wallpaperflare.com_wallpaper.jpg");
+  background-image: url("https://cdn.discordapp.com/attachments/915785990566719488/1102596270025097256/Untitled.png");
 }
 .sec-title {
   margin: 0 auto;
@@ -411,7 +411,7 @@ body::-webkit-scrollbar {
   perspective: 1000px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 700px) {
   .wrapper {
     height: 300px;
     width: 250px;
@@ -425,7 +425,7 @@ body::-webkit-scrollbar {
   align-items: center;
   }
   #section3{
-    padding: 20px 20px;
+    padding: 20px 0px;
   }
 }
 
@@ -504,4 +504,23 @@ body::-webkit-scrollbar {
   color: #1cc7d0;
   border-color: #1cc7d0;
   background: linear-gradient(375deg, transparent, transparent);
+}
+
+#section2 div {
+  max-width: 1900px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.navbar > div {
+  max-width: 1900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
