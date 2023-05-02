@@ -39,7 +39,38 @@ html {
 body::-webkit-scrollbar {
   display: none;
 }
+@media (max-width: 800px) {
+  .navbar div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links ul li {
+    text-align: center;
+  }
+
+  .navbar-links ul li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
 .navbar {
   position: fixed;
   top: 0;
@@ -374,7 +405,7 @@ body::-webkit-scrollbar {
     height: 300px;
     width: 250px;
   }
-  .section{
+  .section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -455,13 +486,11 @@ body::-webkit-scrollbar {
   background: linear-gradient(375deg, #1cc7d0, #2ede98);
   transition: all 0.5s ease;
 }
-
 .back-face ul a:hover {
   color: #1cc7d0;
   border-color: #1cc7d0;
   background: linear-gradient(375deg, transparent, transparent);
 }
-
 .navbar > div {
   max-width: 1900px;
   display: flex;
